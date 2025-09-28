@@ -9,7 +9,7 @@ library(dplyr)
 library(purrr)
 
 # Read soybean volatility dataset with coordinates, convert types, and filter by year (2018–2024)
-df <- read.csv2("data/SOYBEAN-CONDVOL-COORD(GPR).csv", sep = ',')
+df <- read.csv2("Geo_Data/SOYBEAN-CONDVOL-COORD.csv", sep = ',')
 df$Date <- as.Date(df$Date, format = "%Y-%m-%d")
 df$Latitude <- as.numeric(df$Latitude)
 df$Longitude <- as.numeric(df$Longitude)
@@ -66,3 +66,4 @@ df_coords <- df %>% select(District, Latitude, Longitude) %>% distinct()
 write.csv(df_coords[, c("District", "Longitude", "Latitude")], "Export/district_coords_mp.csv", row.names = FALSE)
 
 st_write(madhya_pradesh, "Export/mp_boundary.geojson", delete_dsn = TRUE)
+
