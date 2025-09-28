@@ -9,7 +9,7 @@ library(dplyr)
 library(purrr)
 
 # Read soybean volatility dataset with coordinates, convert types, and filter by year (2018–2024)
-df <- read.csv2("C:/Users/Abbin/Desktop/JNU/Paper-1/data/SOYBEAN-CONDVOL-COORD(GPR).csv", sep = ',')
+df <- read.csv2("data/SOYBEAN-CONDVOL-COORD(GPR).csv", sep = ',')
 df$Date <- as.Date(df$Date, format = "%Y-%m-%d")
 df$Latitude <- as.numeric(df$Latitude)
 df$Longitude <- as.numeric(df$Longitude)
@@ -18,7 +18,7 @@ df$District <- toupper(df$District)
 df_filter <- df %>% filter(format(Date, "%Y") %in% 2018:2024)
 
 # Load boundary shapefile for India, subset to Madhya Pradesh and create a raster template
-india_map <- st_read("C:/Users/Abbinav Sankar/Desktop/JNU/Paper-1/gadm41_IND_shp/gadm41_IND_1.shp", quiet = TRUE)
+india_map <- st_read("gadm41_IND_shp/gadm41_IND_1.shp", quiet = TRUE)
 madhya_pradesh <- filter(india_map, NAME_1 == "Madhya Pradesh")
 
 r_template <- raster(extent(madhya_pradesh), res = 0.01, crs = st_crs(madhya_pradesh)$proj4string)
@@ -60,9 +60,9 @@ successful_rasters <- transpose(results)$result %>% compact()
 all_raster_data <- bind_rows(successful_rasters)
 
 # Save the necessary files
-write.csv(all_raster_data, "C:/Users/Abbin/Desktop/JNU/Paper-1/Export/all_raster_data_mp.csv", row.names = FALSE)
+write.csv(all_raster_data, "Export/all_raster_data_mp.csv", row.names = FALSE)
 
 df_coords <- df %>% select(District, Latitude, Longitude) %>% distinct()
-write.csv(df_coords[, c("District", "Longitude", "Latitude")], "C:/Users/Abbin/Desktop/JNU/Paper-1/Export/district_coords_mp.csv", row.names = FALSE)
+write.csv(df_coords[, c("District", "Longitude", "Latitude")], "Export/district_coords_mp.csv", row.names = FALSE)
 
-st_write(madhya_pradesh, "C:/Users/Abbin/Desktop/JNU/Paper-1/Export/mp_boundary.geojson", delete_dsn = TRUE)
+st_write(madhya_pradesh, "Export/mp_boundary.geojson", delete_dsn = TRUE)
