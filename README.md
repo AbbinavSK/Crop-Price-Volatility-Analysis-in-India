@@ -7,11 +7,3 @@ This repository contains the analysis and code accompanying the paper:
 
 If you have any queries regarding the analysis or data, please contact:  
 📧 **abbinavsankar2003@gmail.com**
-
-## 📂 Repository Structure
-├── data/                 # Raw and processed datasets
-├── scripts/              # Analysis scripts (Python/R)
-├── notebooks/            # Jupyter notebooks for exploratory analysis
-├── figures/              # Plots and visualizations
-├── results/              # Model outputs, intermediate results
-└── README.md             # Project description
