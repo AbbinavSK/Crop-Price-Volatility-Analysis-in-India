@@ -1,10 +1,14 @@
-# The Impact of Meteorological Factors on Crop Price Volatility in India: Case studies of Soybean and Brinjal
+# The Impact of Meteorological Factors on Crop Price Volatility in India: Case Studies of Soybean and Brinjal
 
-This is the codebase containing the analysis to accompany the paper, "The Impact of Meteorological Factors on Crop Price Volatility: Case Studies of Soybean and Brinjal", Ashok Kumar, Abbinav Sankar Kailasam, Anish Rai, Manya Khanna, Sudeep Shukla, Sourish Das, Anirban Chakraborti (2025).
+This repository contains the analysis and code accompanying the paper:  
 
-If you have any queries regarding the analysis/data, email me at abbinavsankar2003@gmail.com
+**"The Impact of Meteorological Factors on Crop Price Volatility: Case Studies of Soybean and Brinjal"**  
+*Ashok Kumar, Abbinav Sankar Kailasam, Anish Rai, Manya Khanna, Sudeep Shukla, Sourish Das, Anirban Chakraborti (2025)*  
 
-📂 Repository Structure
+If you have any queries regarding the analysis or data, please contact:  
+📧 **abbinavsankar2003@gmail.com**
+
+## 📂 Repository Structure
 ├── data/                 # Raw and processed datasets
 ├── scripts/              # Analysis scripts (Python/R)
 ├── notebooks/            # Jupyter notebooks for exploratory analysis
