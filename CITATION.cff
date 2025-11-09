@@ -3,7 +3,7 @@ message: "If you use this repository, please cite it as below."
 authors:
   - family-names: Sankar Kailasam
     given-names: Abbinav
-    orcid: https://orcid.org/
+    orcid: https://orcid.org/0009-0009-6127-7277
 title: "Crop Price Volatility Analysis in India"
 version: 2.0.4
 identifiers:
