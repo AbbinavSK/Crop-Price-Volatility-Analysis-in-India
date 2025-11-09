@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Crop Price Volatility Analysis in India"
+authors:
+  - family-names: "Kailasam"
+    given-names: "Abbinav Sankar"
+affiliation: "Sai University, Chennai"
+date-released: 2025-11-01
+version: "1.0.0"
+doi: ""
+url: "https://github.com/AbbinavSK/Crop-Price-Volatility-Analysis-in-India"
+repository-code: "https://github.com/AbbinavSK/Crop-Price-Volatility-Analysis-in-India"
+abstract: "This repository contains code and analysis for modelling and forecasting crop price volatility in India using time series models such as SARIMAX and LSTM, incorporating environmental and market variables."
+keywords:
+  - crop prices
+  - volatility modelling
+  - time series
+  - SARIMAX
+  - LSTM
+  - India
+license: "MIT"
